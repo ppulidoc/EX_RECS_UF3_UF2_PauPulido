@@ -24,10 +24,10 @@ function connection(){
 }
 
 
-
+//Peta per el get pero el post si que m'el fa be.
 
 //fer get
-app.get('/api/jugadors', (req, res) => {
+app.get('/paupulido/jugadors', (req, res) => {
   const db = connection();
 
   db.collection('qatar22Pulido').doc('final22Pulido').get()
@@ -67,10 +67,10 @@ app.post('/paupulido/mvp/ADRIAAA', (req,res) => {
   //afegir el nou doc a una coleccio existent
   db.collection('qatar22Pulido').doc('final22Pulido').set(datosAdd, { merge: true })
     .then(() => {
-      console.log('Nuevo campo agregado a una colección existente con merge: true');
+      console.log('Nuevo camp agregat a una colecció existent amb merge: true');
     })
     .catch(error => {
       console.error(error);
     });
-  res.send('Operación de añadir completada'); // Enviar respuesta al cliente
+  res.send('Operació de afegir completada'); // Enviar respuesta al cliente
 });

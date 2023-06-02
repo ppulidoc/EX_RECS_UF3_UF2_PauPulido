@@ -13,7 +13,7 @@ export class QatarComponent implements OnInit{
   }
 
   mvp(){
-    const data = { millorJ: 'ADRIAAAAASS' };
+    const data = { millorJ: 'ADRIAAAAASSz' };
     this.http.post<any>('http://localhost:3080/paupulido/mvp/ADRIAAA', data).subscribe(
 
     );
@@ -23,7 +23,7 @@ export class QatarComponent implements OnInit{
     this.getJugadors();
   }
   getJugadors(): void {
-    const url = 'http://localhost:3080/api/jugadors';
+    const url = 'http://localhost:3080/paupulido/jugadors';
 
     this.http.get<string[]>(url)
       .subscribe(
